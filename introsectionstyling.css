@@ -1,0 +1,319 @@
+:root{
+ --font-size: 18px;
+ --companyarrowimage : url("images/icon-arrow-down.svg");
+ --featurearrowimage : url("images/icon-arrow-down.svg");
+ --featuresarrowimage : url("images/icon-arrow-down.svg");
+ --companysarrowimage : url("images/icon-arrow-down.svg");
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+
+ button{
+   display: block;
+   margin: 0 auto;
+   width: 90%;
+   background-color: transparent;
+   margin-bottom: 0.6em;
+   padding: 1em;
+   border-radius: 10px;
+   /* font-family: inherit; */
+
+ }
+
+html,body{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main{
+    width:95%;
+    background-color: white;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    padding: 1em 0 4em;
+    overflow: hidden;
+}
+
+
+
+.imageandtextsection{
+    display: flex;
+    flex-direction: column;
+}
+
+.desktopdropdown,
+.desktopnavbuttons{
+    display: none;
+}
+
+.snapmobileheader{
+    padding:0 1em 1em;
+    display:flex;
+}
+
+#menuicon{
+    margin-left:auto;
+}
+
+
+#menuicon:hover{
+  cursor: pointer;
+}
+
+picture img{
+width: 100%;
+max-width: 400px;
+}
+
+.remoteworkdescription{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5em;
+    padding:0 1em;
+    max-width: 400px;
+ }
+
+.remoteworkdescription h1{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size:2.5rem ;
+}
+
+.remoteworkdescription p{
+    text-align:center ;
+}
+
+.learnmorebtn{
+margin: 2em auto;   
+width: 40%;
+color: white;
+background-color: black;
+}
+
+.clientlogos{
+    display: grid;
+    grid-template-columns: repeat(4,25%);
+    column-gap:0.5em;
+}
+
+.clientlogos img{
+    width: 85%;
+}
+
+
+/* mobile dropdown navigation */
+.mobiledropdown{
+    top: 0;
+    right: 0;
+    position:absolute;
+    background-color: white;
+    height: 100vh;
+    width: 80%;
+    padding: 1em ;
+    color: black;
+    transform: translateX(400px); 
+    z-index: 10;
+    transition: transform 500ms ease-in-out ;
+}
+
+ .closemenubtn{
+    float: right;
+ }  
+
+dl{
+    margin: 2em 2em 1em 0px;
+    list-style: none;
+}
+
+dt{
+ padding: 0.3em 0; 
+}
+
+dd{ 
+    margin-bottom: 1em;  
+    overflow: hidden;
+}
+
+.featurelist,.companylist{
+    display: flex;
+    flex-direction: column;
+    max-height:0;
+    transition: max-height 800ms cubic-bezier(0.165, 0.84, 0.44, 1) ease-in;
+}
+
+dt:hover{
+    cursor: pointer;
+}
+
+dd > span{
+    margin-left: 0.5em;
+}
+
+.dropdown{
+    margin-bottom:0.8em; 
+    display: flex;
+}  
+
+#company::after,
+#feature::after{
+    margin-left: 0.6em; 
+}
+
+#company::after {
+ content: var(--companyarrowimage);
+}
+
+#feature::after{
+content: var(--featurearrowimage);
+}
+
+.loginbutton,
+.learnmorebtn{
+    border: none;
+    font-size: 0.7rem;
+}
+
+.visible{
+    max-height: 100%;
+}
+
+/* end of mobile navigation dropdown */
+
+
+
+@media screen and (min-width:400px) {
+
+    main{
+        position: relative;
+        z-index: 1;
+    }
+
+    #menuicon,
+    .mobiledropdown
+    {
+        display: none;
+    }
+
+    .snapmobileheader{
+       align-items:baseline;
+       gap:1em;
+    }
+
+     button{
+       padding: 0.5em;
+    } 
+
+    .imageandtextsection{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 3em;
+        align-items:center;
+        justify-items: space-around;
+        padding: 0 2em;
+    }
+
+    picture img,
+    .remoteworkdescription{
+     flex-basis: 50%;
+     max-height: 300px;
+    }
+
+    .remoteworkdescription{
+        padding: 0;
+        align-items: start;    
+    }
+
+    .remoteworkdescription p{
+        text-align: left;
+    } 
+
+    .learnmorebtn{
+        padding: 1em;
+        margin-left: 0;
+        margin-top: 2em;
+    }
+
+    dt{
+        color: hsl(0, 0%, 98%);
+    }
+
+    dt:hover{
+        color:hsl(0, 0%, 8%);
+    }
+
+    .learnmorebtn:hover{
+        background-color: transparent;
+        color: black;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    .desktopdropdown{
+        display: flex;
+        gap: 1em;
+        margin-top: 0;
+    }
+
+    .desktopnavbuttons{
+         margin-left: auto;
+         display:flex;
+    } 
+
+     .featureslist,
+     .companyslist{
+        display: none;
+        position: absolute;
+        top:15%;
+        z-index:100;
+        background-color: white;
+        padding: 0.5em; 
+        border-radius: 3px;
+        box-shadow: 0px 0px 6px gray;
+     }
+
+   .featureslist {
+     left:15%;
+    } 
+    
+    .companyslist{
+      left:34%;  
+    }
+
+    .desktopdropdown dt{
+        padding: 0;
+    }
+
+    #features::after,
+    #companys::after{
+        color:  hsl(0, 0%, 98%);
+        margin-left: 0.5em;
+    }
+
+    #companys::after {
+        content: var(--companysarrowimage);
+    }
+       
+   #features::after{
+       content: var(--featuresarrowimage);
+   }
+
+    .visible{
+        display: block;
+    }
+
+  /* .snaplogo{
+   align-self: stretch;
+  } */
+}
