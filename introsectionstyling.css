@@ -32,14 +32,12 @@ html,body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     font-family: 'Epilogue', sans-serif;
 }
 
 
 main{
     width:95%;
-    max-width: 1440px;
     background-color: white;
     height: auto;
     position: relative;
