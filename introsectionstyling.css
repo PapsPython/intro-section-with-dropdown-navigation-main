@@ -22,7 +22,7 @@
    margin-bottom: 0.6em;
    padding: 1em;
    border-radius: 10px;
-   /* font-family: inherit; */
+   font-family: inherit; 
 
  }
 
@@ -216,6 +216,10 @@ content: var(--featurearrowimage);
        padding: 0.5em;
     } 
 
+    button:hover{
+        cursor: pointer;
+    }
+
     .imageandtextsection{
         display: flex;
         flex-direction: row-reverse;
@@ -258,7 +262,6 @@ content: var(--featurearrowimage);
         background-color: transparent;
         color: black;
         border: 1px solid black;
-        cursor: pointer;
     }
 
     .desktopdropdown{
@@ -313,8 +316,4 @@ content: var(--featurearrowimage);
     .visible{
         display: block;
     }
-
-  /* .snaplogo{
-   align-self: stretch;
-  } */
 }
