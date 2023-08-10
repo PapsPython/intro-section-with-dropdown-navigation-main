@@ -1,9 +1,5 @@
 :root{
  --font-size: 18px;
- --companyarrowimage : url("images/icon-arrow-down.svg");
- --featurearrowimage : url("images/icon-arrow-down.svg");
- --featuresarrowimage : url("images/icon-arrow-down.svg");
- --companysarrowimage : url("images/icon-arrow-down.svg");
 }
 
 *,*::before,*::after{
@@ -139,7 +135,7 @@ dl{
 }
 
 dt{
- padding: 0.3em 0; 
+     padding: 0.3em 0; 
 }
 
 dd{ 
@@ -165,20 +161,9 @@ dd > span{
 .dropdown{
     margin-bottom:0.8em; 
     display: flex;
+    gap:0.5em;
 }  
 
-#company::after,
-#feature::after{
-    margin-left: 0.6em; 
-}
-
-#company::after {
- content: var(--companyarrowimage);
-}
-
-#feature::after{
-content: var(--featurearrowimage);
-}
 
 .loginbutton,
 .learnmorebtn{
@@ -214,6 +199,7 @@ content: var(--featurearrowimage);
 
      button{
        padding: 0.5em;
+       align-self: baseline;
     } 
 
     button:hover{
@@ -246,22 +232,28 @@ content: var(--featurearrowimage);
 
     .learnmorebtn{
         padding: 1em;
-        margin-left: 0;
+        margin-left: 0; 
         margin-top: 2em;
+        border: 1px solid black;
+    }
+
+    .registerbutton{
+        padding: 1em;
+        background-color: black;
+        color:#fff; 
     }
 
     dt{
-        color: hsl(0, 0%, 98%);
+        color: black;
     }
 
     dt:hover{
-        color:hsl(0, 0%, 8%);
+        text-shadow: 10px 0px 6px whitesmoke;
     }
 
-    .learnmorebtn:hover{
+    .learnmorebtn:hover,.registerbutton:hover{
         background-color: transparent;
-        color: black;
-        border: 1px solid black;
+        color: black;        
     }
 
     .desktopdropdown{
@@ -273,6 +265,7 @@ content: var(--featurearrowimage);
     .desktopnavbuttons{
          margin-left: auto;
          display:flex;
+         gap:0.8em;
     } 
 
      .featureslist,
@@ -299,7 +292,7 @@ content: var(--featurearrowimage);
         padding: 0;
     }
 
-    #features::after,
+    /* #features::after,
     #companys::after{
         color:  hsl(0, 0%, 98%);
         margin-left: 0.5em;
@@ -311,9 +304,20 @@ content: var(--featurearrowimage);
        
    #features::after{
        content: var(--featuresarrowimage);
-   }
+   } */
 
     .visible{
         display: block;
     }
+
+    .loginbutton:hover{
+        padding: 1.4em;
+        color: white;
+       background-color:yellowgreen;
+    }
+
+    .loginbutton{
+        border: 1px solid white;
+    }
+   
 }
