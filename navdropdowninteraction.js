@@ -10,6 +10,7 @@ document.addEventListener("click",function (e){
     }
 })
 
+const descriptionTitles = document.querySelectorAll(".dropdown")
 const menu = document.getElementById("mobilemenu")
 
 function openMenu(){
@@ -31,7 +32,7 @@ function showDropDownList(){
     this.querySelector(".dropdownicon").innerHTML=`<img src="images/icon-arrow-up.svg">`
 }
 
-const descriptionTitles = document.querySelectorAll(".dropdown")
+
 descriptionTitles.forEach(descriptionTitle => descriptionTitle.addEventListener("mouseleave", removeDropDownList)
 )
 
